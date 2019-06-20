@@ -13,6 +13,7 @@ void compare( int, int );
 int main(){
 
     srand(time ( 0 ));
+
     cout << "---------------------GENERATING INITIAL VALUES ---------------------- \n";
     int user1, software1, user2, software2;
     cout << "\n Computer is generating a number for user..\n";
