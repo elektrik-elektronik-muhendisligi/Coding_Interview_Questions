@@ -15,8 +15,8 @@ bu sayıya göre kullanıcı yazılıma ipucu verecek
   * Kullanıcıdan, yazılımın tuttuğu sayıyı tahmin etmesi istenecek ve kullanıcının girdiği
 sayıya göre yazılım ipucu verecek
 
-Geliştirilecek olan yazılımla ilgili olarak aşağıdaki uyarıları ve önerileri göz önünde bulundurmanız tavsiye
-edilmektedir.
+**Geliştirilecek olan yazılımla ilgili olarak aşağıdaki uyarıları ve önerileri göz önünde bulundurmanız tavsiye
+edilmektedir.**
 - Geliştirilecek yazılım herhangi bir programlama dili (C++, Java, C# vs) ile geliştirilebilir.
 - Geliştirilecek yazılım da hata durumlarını ele almanız beklenmektedir.
 - Geliştirilecek yazılımın kullanıcı ara yüzü olması çözümünüze artı değer katacaktır.
