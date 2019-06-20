@@ -15,7 +15,6 @@ int main(){
     srand(time ( 0 ));
 
     cout << "---------------------GENERATING INITIAL VALUES ---------------------- \n";
-
     int user1, software1, user2, software2;
     cout << "\n Computer is generating a number for user..\n";
     do{
@@ -29,7 +28,6 @@ int main(){
     } while (!is_valid ( user2 ));
 
     cout << "\n\n ------------------- GUESSING & INFORMATION --------------------- ";
-
     while ( 1 ){
 
         cout << "\n\n User is guessing computers number..\n";
@@ -60,7 +58,6 @@ int main(){
            break;
         }
     }
-
     return 0;
 }
 
