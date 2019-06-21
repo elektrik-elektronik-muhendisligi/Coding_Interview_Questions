@@ -65,7 +65,7 @@ int main(){
 Function that generates random numbers between 1000 and 9999
 */
 int rand_number(void){
-   return rand() % 900 + 100;
+   return rand() % 9000 + 1000;
 }
 
 /*
@@ -86,4 +86,17 @@ bool is_valid(int number){
       }
    }
    return 1;
+}
+void compare( int num1, int num2 ){
+     int arr[ 4 ] = { 0 };
+     for (int i = 3; i >= 0;  i--) {
+         int x = pow( 10, i );
+         int temp1 = num1 / x;
+         int temp2 = num2 / x;
+             if ( temp1 == temp2 )
+                arr [ i ] = 1;
+         num1 = num1 % x;
+         num2 = num2 % x;
+     cout << arr[ i ];
+     }
 }
