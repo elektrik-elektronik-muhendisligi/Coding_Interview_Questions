@@ -1,4 +1,4 @@
-# Coding_Interview_Questions
+﻿# Coding_Interview_Questions
 ## Sayı - Tahmin (CS-TECH) --> Kullanım Klavuzu
 ### Amaç
 
@@ -13,7 +13,7 @@ Yazılım ve kullanıcı bir sayı belirleyecek ve sonrasında tahminler yapıla
 ### Algoritma 
 1. Yazılım rakamları birbirinden  farklı 4 basamaklı bir sayı tutar
 2. Kullanıcı rakamları birbirinden farklı 4  basamaklı bir sayı tutar
-3. Yazılım yada kullanıcı tahmin edene kadar oyun devam eder.
+3. Yazılım yada kullanıcı doğru tahmin edene kadar oyun devam eder.
 4. Yanlış tahminlerde taraflara bilgi mesajı verilir.
 
 ### Gerçekleme 
