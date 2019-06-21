@@ -17,15 +17,15 @@ void print( int[] );
 int main(){
 
     srand(time ( 0 ));
+    int user1, software1, user2, software2;
+    int u1[ 4 ] = { 0 }, s1[ 4 ] = { 0 }, u2[ 4 ] = { 0 }, s2[ 4 ] = { 0 };
+    int comp1[ 4 ] = { 0 }, comp2[ 4 ] = { 0 };
     /*
     Bu bölümde tahmin edilecek olan başlangıç değerleri bilgisayar ve kullanıcı
     tarafından oluşturulur. Sayının rakamlarının tekrar etmesi durumunda sayının
     tekrar girilmesi sağlanır.
     */
     cout << "---------------------GENERATING INITIAL VALUES ---------------------- \n";
-    int user1, software1, user2, software2;
-    int u1[ 4 ] = { 0 }, s1[ 4 ] = { 0 }, u2[ 4 ] = { 0 }, s2[ 4 ] = { 0 };
-    int comp1[ 4 ] = { 0 }, comp2[ 4 ] = { 0 };
     cout << "\n Computer is generating a number for user..\n";
     do{
         software1 = rand_number();
@@ -119,6 +119,7 @@ void move_to_array( int num1, int num2, int n1[], int n2[] ){
         num2 = num2 % x;
     }
 }
+
 /*
 Basamaklardan oluşturulan dizilerin karşılaştırılıp aynı değer ve aynı
 basamak değeri varsa 1 yok ise 0 değerini atayan fonksiyon
@@ -129,6 +130,7 @@ void same_digit( int num1[], int num2[], int comp[] ){
                 comp[ i ] = 1;
      }
 }
+
 /*
 İki sayı içinde oluşturulan dizilerin karşılaştırılıp değeri doğru olan ancak
 yanlış basamakta bulunanların değerine -1 atayan fonksiyon
@@ -141,6 +143,7 @@ void diff_digit( int num2[], int num1[], int diff[] ){
          }
      }
 }
+
 /*
 Parametre olarak aldığı diziyi yazdıran fonksiyon
 */
