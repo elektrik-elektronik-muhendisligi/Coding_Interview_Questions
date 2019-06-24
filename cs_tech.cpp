@@ -151,8 +151,9 @@ void move_to_array( int num, int n[] ){
 }
 
 /*
-İki sayı içinde oluşturulan dizilerin karşılaştırılıp değeri doğru olan ancak
-yanlış basamakta bulunanların değerine -1 ve hiç bulunmayanlara 0 atayan fonksiyon
+İki sayı için oluşturulan dizilerin karşılaştırılıp değeri doğru olan ancak yanlış
+basamakta bulunanların değerine -1 ve doğru basamakata bulunanlara 1 değeri atayan
+fonksiyon
 */
 void digit_control( int num2[], int num1[], int diff[] ){
      for (int i = 3; i >= 0;  i--){
@@ -166,8 +167,8 @@ void digit_control( int num2[], int num1[], int diff[] ){
 }
 
 /*
-Basamaklardan oluşturulan dizileri, karşılaştırma dizilerindeki(-1 0 1 değerlere
-sahip dizi) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
+Basamaklardan oluşturulan dizileri, karşılaştırma dizilerindeki (-1 0 1 değerlere
+sahip diziler) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
 sağlayan fonksiyon
 */
 void change_value1( int comp[], int num1[] ){
