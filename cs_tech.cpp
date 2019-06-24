@@ -12,9 +12,10 @@ int rand_digit( void );
 bool is_valid( int );
 void move_to_array( int, int[] );
 void digit_control( int [], int [], int [] );
-void change_value1( int [], int [] );
-// void change_value2( int [], int [], int [] );
+void change_value1( int [], int [], int []);
+void change_value2( int [], int [], int [] );
 bool is_valid_arr( int [] );
+bool equal ( int [], int [] );
 void print( int[] );
 
 int main(){
@@ -23,6 +24,8 @@ int main(){
     int user1, software1, user2, software2;
     int u1[ 4 ] = { 0 }, s1[ 4 ] = { 0 }, u2[ 4 ] = { 0 }, s2[ 4 ] = { 0 };
     int comp1[ 4 ] = { 0 }, comp2[ 4 ] = { 0 };
+
+
     /*
     Bu bölümde tahmin edilecek olan başlangıç değerleri bilgisayar ve kullanıcı
     tarafından oluşturulur. Sayının rakamlarının tekrar etmesi durumunda sayının
@@ -39,6 +42,8 @@ int main(){
         cout << " User's generated number : ";
         cin >> user2;
     } while (!is_valid ( user2 ));
+
+
     /*
     Bu bölümde kullanıcı ve yazılım, iki taraftan biri doğru tahmin edene kadar.
     tahminlerde bulunur. Sayının rakamlarının tekrar etmesi durumunda sayının
@@ -49,8 +54,8 @@ int main(){
 
         cout << "\n\n User is guessing computer's number..\n";
         do{
-           cout << " User's valid number : ";
-           cin >> user1;
+            cout << " User's valid number : ";
+            cin >> user1;
         } while ( !is_valid ( user1) );
 
         cout << " User's information : ";
@@ -66,22 +71,22 @@ int main(){
 
         cout << "\n\n Computer is guessing user's number..";
         do{
-            change_value1( comp2, s2 );
-            // change_value2( comp2, s2, u2);
-            cout << endl;
-            cout << " Computer's valid number : " ;
+            change_value2( s2, u2, comp2);
+            change_value1( s2, u2, comp2);
+            cout << "\n Computer's valid number : " ;
             print ( s2 );
-        } while (!is_valid_arr( s2 ));
+        } while ( !is_valid_arr( s2 ) );
 
         cout << "\n Computers information : ";
         move_to_array( user2, u2 );
         digit_control( u2, s2, comp2 );
-        // same_digit( s2, u2, comp2 );
         print ( comp2 );
         cout << endl;
 
-        if ( software2 == user2 ){
-           cout << "\n\n ------ THE NUMBER IS => " << software2 << " ------> " << " COMPUTER WIN THE GAME!"<< endl;
+        if ( equal ( s2, u2 ) ){
+           cout << "\n\n ------ THE NUMBER IS => ";
+           print( s2 );
+           cout << " ------> " << " COMPUTER WIN THE GAME!"<< endl;
            break;
         }
     }
@@ -168,16 +173,38 @@ void digit_control( int num2[], int num1[], int diff[] ){
 
 /*
 Basamaklardan oluşturulan dizileri, karşılaştırma dizilerindeki (-1 0 1 değerlere
-sahip diziler) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
+sahip diziler ) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
 sağlayan fonksiyon
 */
-void change_value1( int comp[], int num1[] ){
-     int temp[ 10 ] = { 0 }, used = 0;
+void change_value1( int num1[], int num2[], int comp[]){
+     for ( int i = 3; i >= 0;  i-- ){
+         for ( int j = 3; j >= 0;  j-- ){
+             if ( num1[ i ] == num2[ j ] )
+                 num1[ j ] = num1[ i ];
+         }
+     }
+}
+
+/*
+Basamaklardan oluşturulan dizileri, karşılaştırma dizilerindeki (-1 0 1 değerlere
+sahip diziler ) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
+sağlayan fonksiyon
+*/
+void change_value2( int num1[], int num2[], int comp[] ){
+     int temp[ 10 ] = { 0 };
      for ( int i = 3; i >= 0;  i-- ){
          if ( comp[ i ] == 0 ){
             num1[ i ] = rand_digit();
          }
      }
+}
+
+bool equal ( int s2[], int u2[] ){
+     for (int i = 3; i >= 0;  i--){
+         if ( s2[ i ] != u2[ i ] )
+             return 0;
+     }
+     return 1;
 }
 
 /*
