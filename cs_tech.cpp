@@ -30,12 +30,12 @@ int main(){
     tarafından oluşturulur. Sayının rakamlarının tekrar etmesi durumunda sayının
     tekrar girilmesi sağlanır.
     */
-    cout << "---------------------GENERATING INITIAL VALUES ---------------------- \n";
+    cout << " --------------------- GENERATING INITIAL VALUES ------------------- \n";
     cout << "\n Computer is generating a number for user..\n";
     do{
         software1 = rand_number();
     } while (!is_valid ( software1 ));
-    cout << " Computers number : " << software1 << endl;
+    //cout << " Computers number : " << software1 << endl;
 
     cout << "\n\n User is generating a number for computer.. \n";
     do{
@@ -49,7 +49,7 @@ int main(){
     tahminlerde bulunur. Sayının rakamlarının tekrar etmesi durumunda sayının
     tekrar girilmesi sağlanır.
     */
-    cout << "\n\n ------------------- GUESSING & INFORMATION -------------------------";
+    cout << "\n\n ------------------- GUESSING & INFORMATION ------------------------";
     while ( 1 ){
 
         cout << "\n\n User is guessing computer's number..\n";
@@ -65,8 +65,8 @@ int main(){
         print ( comp1 );
 
         if ( software1 == user1 ){
-           cout << "\n\n ------ THE NUMBER IS => " << user1 << " ------> " << " USER WIN THE GAME!"<< endl;
-           break;
+            cout << "\n\n ------ THE NUMBER IS => " << user1 << " ------> " << " USER WIN THE GAME!"<< endl;
+            break;
         }
 
         cout << "\n\n Computer is guessing user's number..";
@@ -76,15 +76,17 @@ int main(){
         cout << "\n Computer's valid number : " ;
         print ( s2 );
 
+        cout << "\n Computer's information : ";
         move_to_array( user2, u2 );
         digit_control( u2, s2, comp2 );
+        print ( comp2 );
         cout << endl;
 
         if ( equal ( s2, u2 ) ){
-           cout << "\n\n ------ THE NUMBER IS => ";
-           print( s2 );
-           cout << " ------> " << " COMPUTER WIN THE GAME!"<< endl;
-           break;
+            cout << "\n\n ------ THE NUMBER IS => ";
+            print( s2 );
+            cout << " ------> " << " COMPUTER WIN THE GAME!"<< endl;
+            break;
         }
     }
     return 0;
@@ -94,14 +96,14 @@ int main(){
 1000 ile 9999 arasında rasgele sayı üreten fonksiyon
 */
 int rand_number(void){
-   return rand() % 9000 + 1000;
+    return rand() % 9000 + 1000;
 }
 
 /*
 1 ile 10 arasında rasgele basamak üretem fonksiyon
 */
 int rand_digit(void){
-   return rand() % 10;
+    return rand() % 10;
 }
 
 /*
@@ -173,12 +175,18 @@ void digit_control( int num2[], int num1[], int diff[] ){
 /*
 Basamaklardan oluşturulan dizileri, karşılaştırma dizilerindeki (-1 0 1 değerlere
 sahip diziler ) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
-sağlayan fonksiyon
+sağlayan fonksiyon. Aynı zamanda karşılaştırma değeri 0 olan fonksyonlar için önceki
+tahminlerin kullanılmaması için 10 boyutlu bir dizi kullanılmıştır.
 */
 void change_digit( int s2[], int u2[], int comp[]){
+     int temp[ 10 ] = { 0 };
      for ( int i = 3; i >= 0;  i-- ){
          if ( comp[ i ] == 0 ){
-            s2[ i ] = rand_digit();
+            if ( temp[ i ] == 0 ){
+               s2[ i ] = rand_digit();
+               int x = s2[ i ];
+               temp[ i ] = 1;
+            }
          }
          for ( int j = 3; j >= 0;  j-- ){
              if ( s2[ i ] == u2[ j ] ){
@@ -189,12 +197,15 @@ void change_digit( int s2[], int u2[], int comp[]){
      }
 }
 
+/*
+Bu fonksiyon iki dizinin tüm elemanları eşlenik ise 1 değil ise 0 değerini döndürür.
+*/
 bool equal ( int s2[], int u2[] ){
-     for (int i = 3; i >= 0;  i--){
-         if ( s2[ i ] != u2[ i ] )
-             return 0;
-     }
-     return 1;
+    for (int i = 3; i >= 0;  i--){
+        if ( s2[ i ] != u2[ i ] )
+           return 0;
+    }
+    return 1;
 }
 
 /*
