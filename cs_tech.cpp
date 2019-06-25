@@ -10,11 +10,10 @@ using namespace std;
 int rand_number( void );
 int rand_digit( void );
 bool is_valid( int );
+bool is_valid_arr( int [] );
 void move_to_array( int, int[] );
 void digit_control( int [], int [], int [] );
-void change_value1( int [], int [], int []);
-void change_value2( int [], int [], int [] );
-bool is_valid_arr( int [] );
+void change_digit( int [], int [], int [] );
 bool equal ( int [], int [] );
 void print( int[] );
 
@@ -36,6 +35,7 @@ int main(){
     do{
         software1 = rand_number();
     } while (!is_valid ( software1 ));
+    cout << " Computers number : " << software1 << endl;
 
     cout << "\n\n User is generating a number for computer.. \n";
     do{
@@ -49,7 +49,7 @@ int main(){
     tahminlerde bulunur. Sayının rakamlarının tekrar etmesi durumunda sayının
     tekrar girilmesi sağlanır.
     */
-    cout << "\n\n ------------------- GUESSING & INFORMATION --------------------- ";
+    cout << "\n\n ------------------- GUESSING & INFORMATION -------------------------";
     while ( 1 ){
 
         cout << "\n\n User is guessing computer's number..\n";
@@ -71,16 +71,13 @@ int main(){
 
         cout << "\n\n Computer is guessing user's number..";
         do{
-            change_value2( s2, u2, comp2);
-            change_value1( s2, u2, comp2);
-            cout << "\n Computer's valid number : " ;
-            print ( s2 );
+            change_digit( s2, u2, comp2);
         } while ( !is_valid_arr( s2 ) );
+        cout << "\n Computer's valid number : " ;
+        print ( s2 );
 
-        cout << "\n Computers information : ";
         move_to_array( user2, u2 );
         digit_control( u2, s2, comp2 );
-        print ( comp2 );
         cout << endl;
 
         if ( equal ( s2, u2 ) ){
@@ -162,11 +159,13 @@ fonksiyon
 */
 void digit_control( int num2[], int num1[], int diff[] ){
      for (int i = 3; i >= 0;  i--){
+        diff[ i ] = 0;
          for (int j = 3; j >= 0; j--) {
              if ( num1[ i ] == num2[ j ] )
                 diff[ i ] = -1;
              if ( num1[ i ] == num2[ i ] )
                 diff[ i ] = 1;
+
           }
      }
 }
@@ -176,26 +175,17 @@ Basamaklardan oluşturulan dizileri, karşılaştırma dizilerindeki (-1 0 1 de�
 sahip diziler ) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
 sağlayan fonksiyon
 */
-void change_value1( int num1[], int num2[], int comp[]){
-     for ( int i = 3; i >= 0;  i-- ){
-         for ( int j = 3; j >= 0;  j-- ){
-             if ( num1[ i ] == num2[ j ] )
-                 num1[ j ] = num1[ i ];
-         }
-     }
-}
-
-/*
-Basamaklardan oluşturulan dizileri, karşılaştırma dizilerindeki (-1 0 1 değerlere
-sahip diziler ) değerlerle karşılaştırıp 1 olmayan elemanların tekrar üretilmesini
-sağlayan fonksiyon
-*/
-void change_value2( int num1[], int num2[], int comp[] ){
-     int temp[ 10 ] = { 0 };
+void change_digit( int s2[], int u2[], int comp[]){
      for ( int i = 3; i >= 0;  i-- ){
          if ( comp[ i ] == 0 ){
-            num1[ i ] = rand_digit();
+            s2[ i ] = rand_digit();
          }
+         for ( int j = 3; j >= 0;  j-- ){
+             if ( s2[ i ] == u2[ j ] ){
+                 s2[ j ] = u2[ j ];
+                 s2[ i ] = u2[ i ];
+             }
+          }
      }
 }
 
