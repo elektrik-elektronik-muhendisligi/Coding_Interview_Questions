@@ -32,9 +32,22 @@ Geliştirilecek olan yazılımla ilgili tavsiye edilen uyarıları ve önerileri
 ### Sonuç
 Programın örnek çıktısı aşağıdadır.
 
+#### OYUN 1: _Yazılım_
+
 ![pc1](https://user-images.githubusercontent.com/32637622/60082392-4c925080-973c-11e9-9301-128ae01df527.PNG)
+
+#### OYUN 2: _Yazılım_
 ![pc2](https://user-images.githubusercontent.com/32637622/60082487-82373980-973c-11e9-9c36-f40cad792942.PNG)
+
+#### OYUN 3: _Yazılım_
+
 ![pc3](https://user-images.githubusercontent.com/32637622/60082493-8400fd00-973c-11e9-8d68-86af8cc2620a.PNG)
+
+#### OYUN 4: _Yazılım_
+
 ![pc4](https://user-images.githubusercontent.com/32637622/60082494-85322a00-973c-11e9-8973-8ba732ce4837.PNG)
+
+#### OYUN 5: _Kullanıcı_
+
 ![user1](https://user-images.githubusercontent.com/32637622/60082496-86635700-973c-11e9-8748-8275251e50e0.PNG)
 ![user2](https://user-images.githubusercontent.com/32637622/60082501-88c5b100-973c-11e9-8c80-0b2179072b0f.PNG)
