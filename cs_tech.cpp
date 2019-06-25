@@ -56,7 +56,7 @@ int main(){
         do{
             cout << " User's valid number : ";
             cin >> user1;
-        } while ( !is_valid ( user1) );
+        }while ( !is_valid ( user1) );
 
         cout << " User's information : ";
         move_to_array( software1, s1 );
@@ -72,7 +72,7 @@ int main(){
         cout << "\n\n Computer is guessing user's number..";
         do{
             change_digit( s2, u2, comp2);
-        } while ( !is_valid_arr( s2 ) );
+        }while ( !is_valid_arr( s2 ) );
         cout << "\n Computer's valid number : " ;
         print ( s2 );
 
@@ -110,19 +110,19 @@ int rand_digit(void){
 Üretilen sayının basamaklarının birbirinden farklı olup olmadığını test eden fonksiyon
 */
 bool is_valid(int number){
-    int temp, i, j;
-    for (i = 0; i < 10; i++) {
-        j = 0;
-        temp = number;
-        while (temp > 0) {
-            if (temp % 10 == i)
-               j++;
-            if (j > 1)
-               return 0;
-        temp /= 10;
-        }
-    }
-   return 1;
+     int temp, i, j;
+     for (i = 0; i < 10; i++) {
+         j = 0;
+         temp = number;
+         while (temp > 0) {
+              if (temp % 10 == i)
+                 j++;
+              if (j > 1)
+                 return 0;
+         temp /= 10;
+         }
+      }
+      return 1;
 }
 
 /*
@@ -131,27 +131,27 @@ ile test eden fonksiyon. Bu fonksiyon bilgisayar tahminini optimize etmek amacı
 kullanılacak
 */
 bool is_valid_arr(int number[]){
-    for (int i = 0; i < 10; i++){
-        int count = 0;
-        for (int j = 0; j < 4; j++){
-            if ( number[ j ] == i )
-               count += 1;
-            if ( count > 1 )
-               return 0;
-        }
-    }
-    return 1;
+     for (int i = 0; i < 10; i++){
+         int count = 0;
+         for (int j = 0; j < 4; j++){
+             if ( number[ j ] == i )
+                count += 1;
+             if ( count > 1 )
+                return 0;
+         }
+     }
+     return 1;
 }
 
 /*
 Dört basamaklı sayıların rakamlarını 4 boyutlu bir diziye atayan fonksiyon
 */
 void move_to_array( int num, int n[] ){
-    for (int i = 3; i >= 0;  i--) {
-        int x = pow( 10, i );
-        n[ i ] = num / x;
-        num = num % x;
-    }
+     for (int i = 3; i >= 0;  i--) {
+         int x = pow( 10, i );
+         n[ i ] = num / x;
+         num = num % x;
+     }
 }
 
 /*
@@ -161,14 +161,13 @@ fonksiyon
 */
 void digit_control( int num2[], int num1[], int diff[] ){
      for (int i = 3; i >= 0;  i--){
-        diff[ i ] = 0;
+         diff[ i ] = 0;
          for (int j = 3; j >= 0; j--) {
              if ( num1[ i ] == num2[ j ] )
-                diff[ i ] = -1;
+                 diff[ i ] = -1;
              if ( num1[ i ] == num2[ i ] )
-                diff[ i ] = 1;
-
-          }
+                 diff[ i ] = 1;
+         }
      }
 }
 
@@ -182,11 +181,11 @@ void change_digit( int s2[], int u2[], int comp[]){
      int temp[ 10 ] = { 0 };
      for ( int i = 3; i >= 0;  i-- ){
          if ( comp[ i ] == 0 ){
-            if ( temp[ i ] == 0 ){
-               s2[ i ] = rand_digit();
-               int x = s2[ i ];
-               temp[ i ] = 1;
-            }
+             if ( temp[ i ] == 0 ){
+                 s2[ i ] = rand_digit();
+                 int x = s2[ i ];
+                 temp[ i ] = 1;
+             }
          }
          for ( int j = 3; j >= 0;  j-- ){
              if ( s2[ i ] == u2[ j ] ){
@@ -201,17 +200,17 @@ void change_digit( int s2[], int u2[], int comp[]){
 Bu fonksiyon iki dizinin tüm elemanları eşlenik ise 1 değil ise 0 değerini döndürür.
 */
 bool equal ( int s2[], int u2[] ){
-    for (int i = 3; i >= 0;  i--){
-        if ( s2[ i ] != u2[ i ] )
-           return 0;
-    }
-    return 1;
+     for (int i = 3; i >= 0;  i--){
+         if ( s2[ i ] != u2[ i ] )
+            return 0;
+     }
+     return 1;
 }
 
 /*
 Parametre olarak aldığı diziyi yazdıran fonksiyon
 */
 void print( int arr[] ){
-    for (int i = 3;  i >= 0;  i--)
-        cout << arr[ i ];
+     for (int i = 3;  i >= 0;  i--)
+         cout << arr[ i ];
 }
