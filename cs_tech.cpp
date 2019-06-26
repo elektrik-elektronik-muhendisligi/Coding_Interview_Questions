@@ -184,7 +184,7 @@ void change_digit( int s2[], int u2[], int comp[]){
            if ( temp[ i ] == 0 ){
               s2[ i ] = rand_digit();
               int x = s2[ i ];
-              temp[ i ] = 1;
+              temp[ x ] += 1;
            }
         }
         for ( int j = 3; j >= 0;  j-- ){
