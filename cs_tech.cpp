@@ -35,7 +35,7 @@ int main(){
     do{
         software1 = rand_number();
     } while (!is_valid ( software1 ));
-    //cout << " Computers number : " << software1 << endl;
+    cout << " Computers number : " << software1 << endl;
 
     cout << "\n\n User is generating a number for computer.. \n";
     do{
@@ -178,10 +178,10 @@ sağlayan fonksiyon. Aynı zamanda karşılaştırma değeri 0 olan fonksyonlar 
 tahminlerin kullanılmaması için 10 boyutlu bir dizi kullanılmıştır.
 */
 void change_digit( int s2[], int u2[], int comp[]){
-    int temp[ 10 ] = { 0 };
+    int temp[ 10 ] = { 0 }, x = 0;
     for ( int i = 3; i >= 0;  i-- ){
         if ( comp[ i ] == 0 ){
-           if ( temp[ i ] == 0 ){
+           if ( temp[ x ] == 0 ){
               s2[ i ] = rand_digit();
               int x = s2[ i ];
               temp[ x ] += 1;
