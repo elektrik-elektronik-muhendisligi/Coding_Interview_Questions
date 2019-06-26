@@ -178,13 +178,12 @@ sağlayan fonksiyon. Aynı zamanda karşılaştırma değeri 0 olan belirli bir 
 için önceki tahminlerin kullanılmaması için 10 boyutlu bir dizi kullanılmıştır.
 */
 void change_digit( int s2[], int u2[], int comp[]){
-    int temp[ 10 ] = { 0 }, x = 0;
+    int temp[ 10 ] = { 0 };
     for ( int i = 3; i >= 0;  i-- ){
         if ( comp[ i ] == 0 ){
-           if ( temp[ x ] == 0 ){
+           if ( temp[ i ] == 0 ){
               s2[ i ] = rand_digit();
-              int x = s2[ i ];
-              temp[ x ] += 1;
+              temp[ i ] += 1;
            }
         }
         for ( int j = 3; j >= 0;  j-- ){
