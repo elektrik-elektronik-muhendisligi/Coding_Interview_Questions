@@ -9,6 +9,10 @@ Good morning! Here's your coding interview problem for today. This problem was r
 
 Bonus: Can you do this in one pass?
 
+**Solution :**
+
+![Ekran Alıntısı](https://user-images.githubusercontent.com/32637622/60755419-243a0a00-9ff8-11e9-931e-ed325dd03734.PNG)
+
 
 --------------------------------
 
@@ -23,8 +27,7 @@ where 1 <= k <= length of the array, compute the maximum values of each subarray
    10 = max(10, 5, 2)
    7  = max(5, 2, 7)
    8  = max(2, 7, 8)
-   8  = max(7, 8, 7) 
+   8  = max(7, 8, 7)
 ```   
-Do this in O(n) time and O(k) space. You can modify the input array in-place and you do not need to store the results. You can simply 
+Do this in O(n) time and O(k) space. You can modify the input array in-place and you do not need to store the results. You can simply
 print them out as you compute them.
-
