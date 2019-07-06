@@ -37,7 +37,7 @@ int main (){
 
     int pyramid [SIZE][SIZE];
     create_pyramid (pyramid);
-    cout << "\nsum of max path = " << maxPathSum (pyramid);
+    cout << "sum of max path = " << maxPathSum (pyramid) << endl;
 
 }
 void create_pyramid (int pyramid [SIZE][SIZE]){
