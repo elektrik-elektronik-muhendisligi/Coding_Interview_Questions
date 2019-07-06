@@ -11,7 +11,7 @@ Bonus: Can you do this in one pass?
 
 **Solution :**
 
-![Ekran Alıntısı](https://user-images.githubusercontent.com/32637622/60755419-243a0a00-9ff8-11e9-931e-ed325dd03734.PNG)
+![image](https://user-images.githubusercontent.com/32637622/60755485-1fc22100-9ff9-11e9-85cb-7a7074aa35b0.png)
 
 
 --------------------------------
