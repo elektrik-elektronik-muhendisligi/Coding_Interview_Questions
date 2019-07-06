@@ -33,3 +33,5 @@ Do this in O(n) time and O(k) space. You can modify the input array in-place and
 print them out as you compute them.
 
 ### **_Solution :_**
+
+![image](https://user-images.githubusercontent.com/32637622/60755467-c528c500-9ff8-11e9-9345-33d1c13391f0.png)
