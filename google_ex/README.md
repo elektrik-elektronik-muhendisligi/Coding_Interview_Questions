@@ -9,9 +9,9 @@ Good morning! Here's your coding interview problem for today. This problem was r
 
 Bonus: Can you do this in one pass?
 
-**Solution :**
+### **_Solution :_**
 
-![Ekran Alıntısı](https://user-images.githubusercontent.com/32637622/60755419-243a0a00-9ff8-11e9-931e-ed325dd03734.PNG)
+![image](https://user-images.githubusercontent.com/32637622/60755485-1fc22100-9ff9-11e9-85cb-7a7074aa35b0.png)
 
 
 --------------------------------
@@ -31,3 +31,7 @@ where 1 <= k <= length of the array, compute the maximum values of each subarray
 ```   
 Do this in O(n) time and O(k) space. You can modify the input array in-place and you do not need to store the results. You can simply
 print them out as you compute them.
+
+### **_Solution :_**
+
+![image](https://user-images.githubusercontent.com/32637622/60755467-c528c500-9ff8-11e9-9345-33d1c13391f0.png)
