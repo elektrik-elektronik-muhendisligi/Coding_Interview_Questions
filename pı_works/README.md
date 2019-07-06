@@ -1,4 +1,4 @@
-**_This project was implemented on by Rahim ÇUBUK and Çağrı Esen.._**
+**_This project was implemented on by Rahim ÇUBUK and Çağrı ESEN.._**
 
 Write code for below problem. The input below is just an example and you should implement independent from the
 input. Please paste the link to the answer shared using pastebin, dotnetfiddle, jsfiddle, or any other similar
