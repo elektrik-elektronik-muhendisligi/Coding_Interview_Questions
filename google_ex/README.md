@@ -10,8 +10,9 @@ Good morning! Here's your coding interview problem for today. This problem was r
 Bonus: Can you do this in one pass?
 
 
+--------------------------------
 
-### **_Daily Coding Problem: Problem #18[Hard]_**
+### **_Daily Coding Problem_**
 ### **_Problem #18[Hard]:_**
 
 Good morning! Here's your coding interview problem for today.This problem was asked by Google.Given an array of integers and a number k,
