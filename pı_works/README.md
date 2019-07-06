@@ -3,7 +3,7 @@
 Write code for below problem. The input below is just an example and you should implement independent from the
 input. Please paste the link to the answer shared using pastebin, dotnetfiddle, jsfiddle, or any other similar
 web-site.
-
+## _Question :_
 - You will have a ORTHOGONAL TRIANGLE input from a file and you need to find the maximum sum of the numbers according
 to given rules below;
 
@@ -24,3 +24,5 @@ to given rules below;
   1 + 8 + 6 + 9 = 24.  
 
 - As you see 1, 8, 6, 9 are all NOT PRIME NUMBERS and walking over these yields the maximum sum.
+
+## _Solution :_
