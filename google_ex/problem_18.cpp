@@ -35,7 +35,7 @@ void print( int arr[ 3 ] ){
 }
 
 int main(){
-    int array[ 6 ] = { 9, 5, 2, 7, 8, 7 }, top[ 3 ] = { 0 };
+    int array[ 6 ] = { 10, 5, 2, 7, 8, 7 }, top[ 3 ] = { 0 };
 
     for ( int i = 0; i < 4; i++ ){
         int x = 0;
