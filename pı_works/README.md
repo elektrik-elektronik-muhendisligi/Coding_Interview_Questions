@@ -26,3 +26,5 @@ to given rules below;
 - As you see 1, 8, 6, 9 are all NOT PRIME NUMBERS and walking over these yields the maximum sum.
 
 ## _Solution :_
+
+![3](https://user-images.githubusercontent.com/32637622/60755568-374dd980-9ffa-11e9-850e-14f40c560826.PNG)
