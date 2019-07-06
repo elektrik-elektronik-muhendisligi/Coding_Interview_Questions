@@ -9,21 +9,18 @@
 */
 #include <iostream>
 using namespace std;
-
 int main(){
-    int array[ 4 ] = { 10, 15, 3, 7 }, sum = 0, ind = 0, k = 17;
-    int i, j, count = 0;
-
-            for ( i = 0; i < 3; i++) {
-                for ( j = i+1 ; j <= 3; j++) {
-                    sum = array[ i ] + array[ j ] ;
-                    cout << sum << endl;
-                    if (sum == k) {
-                        cout << array[ i ] << " + " << array[ j ] << " = " << sum << endl;
-                    break;
-                    }
-                }
+    int array[ 4 ] = { 10, 15, 3, 7 }, sum = 0, k = 17;
+    for ( int i = 0; i < 3; i++ ){
+        for ( int j = i+1 ; j <= 3; j++ ){
+            sum = array[ i ] + array[ j ] ;
+            cout << sum << endl;
+            if (sum == k) {
+               cout << array[ i ] << " + " << array[ j ] << " = " << sum << endl;
+               break;
             }
+        }
+    }
 
     return 0;
 }

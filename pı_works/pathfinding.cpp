@@ -1,5 +1,5 @@
 /*
-You can use the "PI_Works_Technical_Questionnaire_1.sln" file to run project.This project was implemented 
+You can use the "PI_Works_Technical_Questionnaire_1.sln" file to run project.This project was implemented
 on by Rahim ÇUBUK and Çağrı Esen..
 Write code for below problem. The input below is just an example and you should implement independent from the
 input. Please paste the link to the answer shared using pastebin, dotnetfiddle, jsfiddle, or any other similar
