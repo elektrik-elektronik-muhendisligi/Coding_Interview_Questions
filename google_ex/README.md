@@ -1,7 +1,7 @@
 ## Google Coding Interview Questions
 
-### **_Daily Coding Problem: Problem #1 [Easy]_**
-### **_EXAMPLE_0:_**
+### **_Daily Coding Problem_**
+### **_Problem #1[Easy]:_**
 
 Good morning! Here's your coding interview problem for today. This problem was recently asked by Google. Given a list of numbers and a number k, return whether any two numbers from the list add up to k.
 
@@ -12,7 +12,7 @@ Bonus: Can you do this in one pass?
 
 
 ### **_Daily Coding Problem: Problem #18[Hard]_**
-### **_EXAMPLE_1:_**
+### **_Problem #18[Hard]:_**
 
 Good morning! Here's your coding interview problem for today.This problem was asked by Google.Given an array of integers and a number k,
 where 1 <= k <= length of the array, compute the maximum values of each subarray of length k.
